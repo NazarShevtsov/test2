@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  font-display: swap;
+  src: url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*Null style*/
 
 * {
@@ -90,15 +114,6 @@ h6 {
 
 /*--------------------*/
 
-@font-face {
-  font-family: 'Roboto Regular';
-  src: url(../fonts/Roboto-Regular.ttf);
-  font-family: 'Roboto Light';
-  src: url(../fonts/Roboto-Light.ttf);
-  font-family: 'Roboto Bold';
-  src: url(../fonts/Roboto-Bold.ttf);
-}
-
 body {
   background-color: #fafafa;
   font-size: 14px;
@@ -142,7 +157,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Roboto Bold';
+  font-family: 'Roboto-Bold';
 }
 
 .header__nav ul {
@@ -233,6 +248,71 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 60%;
+  font-size: 0;
+  height: 44px;
+  width: 42px;
+  border-radius: 50%;
+}
+
+.slick-arrow.slick-prev {
+  height: 43px;
+  z-index: 1;
+  left: 5%;
+  background: url(../img/slider_arrow/arrow-previous-active.svg);
+}
+
+.slick-arrow.slick-prev:hover {
+  background: url(../img/slider_arrow/arrow-previous-hover.svg);
+}
+
+.webp.slick-prev {
+  background: url(../img/slider_arrow/arrow-previous-active.webp);
+}
+
+.webp.slick-prev:hover {
+  background: url(../img/slider_arrow/arrow-previous-hover.webp);
+}
+
+.slick-arrow.slick-next {
+  right: 5%;
+  background: url(../img/slider_arrow/arrow-next-active.svg);
+}
+
+.slick-arrow.slick-next:hover {
+  background: url(../img/slider_arrow/arrow-next-hover.svg);
+}
+
+.webp.slick-arrow.slick-next {
+  background: url(../img/slider_arrow/arrow-next-active.webp);
+}
+
+.webp.slick-arrow.slick-next:hover {
+  background: url(../img/slider_arrow/arrow-next-hover.webp);
+}
+
+.slick-arrow.slick-prev.slick-disabled {
+  background: url(../img/slider_arrow/arrow-previous-noactive.svg);
+}
+
+.webp.slick-arrow.slick-prev.slick-disabled {
+  background: url(../img/slider_arrow/arrow-previous-noactive.webp);
+}
+
+.slick-arrow.slick-next.slick-disabled {
+  background: url(../img/slider_arrow/arrow-next-noactive.svg);
+}
+
+.webp.slick-arrow.slick-next.slick-disabled {
+  background: url(../img/slider_arrow/arrow-next-noactive.webp);
+}
+
+.slider__item {
+  position: relative;
 }
 
 .slider__item .first {
