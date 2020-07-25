@@ -42,4 +42,8 @@ $(document).ready(function () {
 		vertical: false, //do you want a vertical slider? (But at the start change slider`s display block and add height for slider items for quality)
 		verticalSwiping: false, // if you use vertical slider change verticalSwiping on the true
 	});
+	$('.header__burger').click(function(event){
+		$('.header__burger,.header__menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
 });
