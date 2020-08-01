@@ -852,7 +852,7 @@ main {
   font-weight: 400;
   margin: 30px 0px;
   line-height: 25px;
-  color: #777777;
+  color: #777;
   white-space: wrap;
 }
 
@@ -880,6 +880,90 @@ main {
   position: relative;
   z-index: 0;
   padding: 0px 0px 19px 0px;
+}
+
+.team__title {
+  padding: 45px 0px 0px 0px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+.team__text {
+  padding: 44px 0px 0px 0px;
+  font-weight: 400;
+  color: #777777;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team__text p {
+  max-width: 580px;
+  padding: 0px 5px;
+  text-align: center;
+  white-space: wrap;
+  line-height: 24px;
+}
+
+.team__members {
+  padding: 65px 0px 0px 0px;
+  max-width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team__member {
+  width: 360px;
+  padding: 0px 0px 10px 0px;
+}
+
+.team__member__photo {
+  height: 438px;
+}
+
+.team__member__photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.team__member__info {
+  background: #fff;
+}
+
+.team__member__body {
+  padding: 35px;
+  color: #777;
+}
+
+.team__member__title {
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 0px 0px 10px 0px;
+  color: #000;
+}
+
+.team__member__subtitle {
+  font-size: 16px;
+}
+
+.team__member__description {
+  padding: 22px 0px 0px 0px;
+  font-weight: 400;
 }
 
 @media (max-width: 1160px) {
@@ -922,6 +1006,14 @@ main {
 
   .skills__sliders {
     margin: 30px 0px 0px 0px;
+  }
+
+  .team__member {
+    width: 300px;
+  }
+
+  .team__member__photo {
+    height: 400px;
   }
 }
 
@@ -992,6 +1084,13 @@ main {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 440px;
             flex: 0 1 440px;
+  }
+
+  .team__members {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1348,6 +1447,14 @@ main {
     width: 75%;
     height: 50%;
   }
+
+  .team__member {
+    width: 280px;
+  }
+
+  .team__member__photo {
+    height: 380px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1491,7 +1598,7 @@ main {
 
 @media (max-width: 400px) {
   .noUi-horizontal {
-    width: 275px;
+    width: 270px;
   }
 
   .noUi-handle:before {
