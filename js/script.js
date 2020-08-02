@@ -8,7 +8,7 @@ $(document).ready(function(){
 			slidesToScroll: 1, // how many slides should scroll by one press 
 			speed: 1000, //speed of scrolling
 			easing: 'ease', //type of animation by scrolling
-			infinite: true, //do you want a infinite slider?
+			infinite: false, //do you want a infinite slider?
 			initialSlide: 0, //which slide should start slider?
 			autoplay: true, //autoplay scrolling slides
 			autoplaySpeed: 10000, //period of scrolling 
