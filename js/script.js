@@ -10,7 +10,7 @@ $(document).ready(function(){
 			easing: 'ease', //type of animation by scrolling
 			infinite: false, //do you want a infinite slider?
 			initialSlide: 0, //which slide should start slider?
-			autoplay: true, //autoplay scrolling slides
+			autoplay: false, //autoplay scrolling slides
 			autoplaySpeed: 10000, //period of scrolling 
 			pauseOnFocus: true, //pause scrolling when cursor click slide
 			pauseOnHover: true, //pause scrolling when cursor hovers slide
@@ -58,7 +58,7 @@ $(document).ready(function(){
 			pauseOnDotsHover: true, //pause scrolling when cursor hovers dots
 			draggable: true, //if you want or dont want to swipe slides on PC
 			swipe: false, //if you want or dont want to swipe slides on mobile
-			veriableWidth: false, //the content of the slide itself determines its width (can combinate with centerMove)
+			veriableWidth: true, //the content of the slide itself determines its width (can combinate with centerMove)
 			appendArrows:$('.nav__arrows'), // arrows in the tag`s class'.btn'
 	});
 	$('.slide__main-slider').slick({
@@ -80,10 +80,13 @@ $(document).ready(function(){
 			asNavFor: '.slide__subslider',
 			responsive: [
 		    {
-		      breakpoint: 768,
+		      breakpoint: 1025,
 		      settings: {
 		        swipe:true,
 		        draggable:true,
+		        autoplay: true,
+		        autoplaySpeed:12000,
+		        asNavFor:false,
 		      }
 		    },
 		  ],
@@ -106,6 +109,21 @@ $(document).ready(function(){
 			swipe: false, //if you want or dont want to swipe slides on mobile
 			veriableWidth: false, //the content of the slide itself determines its width (can combinate with centerMove)
 			asNavFor: '.slide__main-slider',
+			responsive: [
+		    {
+		      breakpoint: 1025,
+		      settings: {
+		        asNavFor:false,
+		      }
+		    },
+		  ],
+	});
+	$('.sidebar__title').click(function(event){
+		if($('.sidebar__site-action').hasClass('one')){
+			$('.sidebar__title').not($(this)).removeClass('active');
+			$('.sidebar__recomend').not($(this).next()).slideUp(300);
+		}
+		$(this).toggleClass('active').next().slideToggle(300);
 	});
 });
 
